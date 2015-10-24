@@ -10,7 +10,7 @@ require 'cinch'
       c.port = 16667
       c.ssl.use = true
 
-      c.channels = ['#blahblah', '#snucse15']
+      c.channels = ['#blahblah']
       c.max_reconnect_delay = 60
     end
 
@@ -22,12 +22,12 @@ require 'cinch'
       m.reply '술 좀 그만 먹어'
     end
 
-    on :message, '뭐 먹지' do |m|
+    on :message, '뭐 먹지?' do |m|
       m.reply ['맥주', '소주', '막걸리', '칵테일'].sample()
     end
 
     on :message, '맥주 어디서 먹지?' do |m|
-      m.reply ['코너탭', '링고', '세계맥주', '블루트레인', '전 술꾼이 아니라서 모르겠어요ㅠㅠ'].sample()
+      m.reply ['코너탭', '링고', '세계맥주', '블루트레인', '전 술꾼이 아니라서 모르겠어요ㅠㅠ', '라라삐뽀', '레드락'].sample()
     end
 
     on :message, '소주 뭐 먹지?' do |m|
