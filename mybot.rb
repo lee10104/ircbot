@@ -22,6 +22,10 @@ require 'cinch'
       m.reply '술 좀 그만 먹어'
     end
 
+    on :message, '치맥 어디서 먹지?' do |m|
+      m.reply ['오빠닭', '치르치르', '매드후라이치킨'].sample()
+    end
+
     on :message, '뭐 먹지?' do |m|
       m.reply ['맥주', '소주', '막걸리', '칵테일'].sample()
     end
