@@ -14,8 +14,8 @@ bot = Cinch::Bot.new do
     c.max_reconnect_delay = 60
   end
 
-  on :message, 'ping' do |m|
-    m.reply 'pong'
+  on :message, '부어라!' do |m|
+    m.reply '마셔라!'
   end
 
   on :message, '술 먹고싶다' do |m|
