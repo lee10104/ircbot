@@ -7,10 +7,10 @@ bot = Cinch::Bot.new do
     c.user = 'G-bot'
 
     c.server = 'irc.uriirc.org'
-    c.port = 16667
+    c.port = 16664
     c.ssl.use = true
 
-    c.channels = ['#blahblah']
+    c.channels = ['#blahblah', '#snucse15']
     c.max_reconnect_delay = 60
   end
 
@@ -35,7 +35,7 @@ bot = Cinch::Bot.new do
   end
 
   on :message, '소주 뭐 먹지?' do |m|
-    m.reply ['좋은데이 석류', '좋은데이 블루베리', '좋은데이 자몽', '순하리 유자', '순하리 복숭아'].sample()
+    m.reply ['좋은데이 석류', '좋은데이 블루베리', '좋은데이 자몽', '순하리 유자', '순하리 복숭아', '참이슬 클래식'].sample()
   end
 
   on :message, '소주 어디서 먹지?' do |m|
@@ -47,7 +47,7 @@ bot = Cinch::Bot.new do
   end
 
   on :message, '칵테일 어디서 먹지?' do |m|
-    m.reply '진바'
+    m.reply ['진바', '링고'].sample()
   end
 
   on :message, '너무 적잖아' do |m|
