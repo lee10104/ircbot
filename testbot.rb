@@ -14,8 +14,16 @@ bot = Cinch::Bot.new do
     c.max_reconnect_delay = 60
   end
 
-  on :message, "부어라!", "[<]*[>]*" do |m|
-    m.reply "마셔라!"
+  on :op, "T-bot" do |m|
+    m.reply "상냥해..."
+  end
+
+  on :message, /([<].*[>] )?부어라!/ do |m|
+    if m.user.nick == "lee10104"
+      m.reply "더 마셔라!"
+    else
+      m.reply "마셔라!"
+    end
   end
 
   on :message, "술!" do |m|
