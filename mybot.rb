@@ -10,12 +10,16 @@ bot = Cinch::Bot.new do
     c.port = 16664
     c.ssl.use = true
 
-    c.channels = ['#blahblah', '#snucse15']
+    c.channels = ['#blahblah']
     c.max_reconnect_delay = 60
   end
 
   on :message, '부어라!' do |m|
     m.reply '마셔라!'
+  end
+
+  on :message, '술!' do |m|
+    m.reply '고기!'
   end
 
   on :message, '술 먹고싶다' do |m|
