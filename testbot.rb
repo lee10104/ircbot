@@ -14,7 +14,7 @@ bot = Cinch::Bot.new do
     c.max_reconnect_delay = 60
   end
 
-  on :op, "G-bot" do |m|
+  on :op, "T-bot" do |m|
     if m.user.realname == "lee10104"
       m.reply "상냥해♥"
     else
@@ -32,7 +32,7 @@ bot = Cinch::Bot.new do
     m.reply "고기!"
   end
 
-  on :message, /^(<.+> )?.*술.*먹고.*싶다.*$/ do |m|
+  on :message, /^(<.+> )?.*술[^안]*먹고.*싶다.*$/ do |m|
     if m.user.realname != "BYBbot"
       m.reply "#{m.user.nick}, 술 좀 그만 먹어"
     else
